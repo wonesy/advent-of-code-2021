@@ -1,18 +1,8 @@
-from dataclasses import dataclass
 from typing import List
 import sys
 
-class Space:
-    value: int
-    marked: bool = False
-
-    def __init__(self, value: int) -> None:
-        self.value = value
-
-
-@dataclass
 class Board:
-    spaces: List[Space]
+    spaces: List[str]
     marks: List[bool]
 
     def __init__(self, spaces: List[str]) -> None:
@@ -83,6 +73,6 @@ for draw in draws:
             print("DRAW", draw)
             print("SUM", sum)
             print(int(draw) * sum)
-            sys.exit(0)
+            sys.exit()
 
 # print(boards)
